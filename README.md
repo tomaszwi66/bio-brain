@@ -8,11 +8,9 @@ network built on biologically accurate mechanisms. The creature navigates a
 experience through dopamine-modulated synaptic plasticity.
 
 Unlike traditional AI approaches, this project uses actual neuroscience
-models — every neuron fires discrete spikes, every synapse has
+models - every neuron fires discrete spikes, every synapse has
 excitatory/inhibitory dynamics, and learning happens through biologically
 plausible STDP (Spike-Timing Dependent Plasticity).
-
-![Bio Brain Screenshot](screenshots/screenshot.png)
 
 ---
 
@@ -44,7 +42,7 @@ plausible STDP (Spike-Timing Dependent Plasticity).
 
 ## Biological Mechanisms
 
-### Neurons — Izhikevich Model (2003)
+### Neurons - Izhikevich Model (2003)
 
 Each neuron simulates membrane voltage dynamics using the Izhikevich model,
 which reproduces the spiking behavior of real cortical neurons with just
@@ -62,22 +60,22 @@ two differential equations.
 
 Excitatory synapses increase post-synaptic current (glutamate-like).
 Inhibitory synapses decrease it (GABA-like). Synaptic current decays
-exponentially, simulating receptor kinetics — excitatory with AMPA-like
+exponentially, simulating receptor kinetics - excitatory with AMPA-like
 time constant (~5ms, decay 0.85), inhibitory with GABA-A-like time
 constant (~10ms, decay 0.90).
 
-### Learning — Three-Factor STDP
+### Learning - Three-Factor STDP
 
 The network learns through a biologically plausible three-factor rule:
 
-**Factor 1 — Spike timing.** Pre-before-post creates eligibility for
+**Factor 1 - Spike timing.** Pre-before-post creates eligibility for
 potentiation (LTP). Post-before-pre creates eligibility for depression (LTD).
 
-**Factor 2 — Eligibility trace.** Decaying memory of recent spike
-coincidences (tau ~ 25ms). This implements synaptic tagging — the synapse
+**Factor 2 - Eligibility trace.** Decaying memory of recent spike
+coincidences (tau ~ 25ms). This implements synaptic tagging - the synapse
 remembers that something happened.
 
-**Factor 3 — Neuromodulation.** Dopamine (reward) and serotonin (punishment)
+**Factor 3 - Neuromodulation.** Dopamine (reward) and serotonin (punishment)
 gate whether eligible synapses actually change their weight. Without a
 neuromodulator signal, no learning occurs.
 
@@ -200,7 +198,7 @@ experience.
 
 Dopamine spikes when the creature approaches food (food_near to DA
 pathway). Serotonin spikes on enemy or poison contact. Learning only
-occurs when neuromodulator levels are elevated — this is the three-factor
+occurs when neuromodulator levels are elevated - this is the three-factor
 gating mechanism in action.
 
 ---
@@ -243,4 +241,4 @@ balance of spiking network dynamics.
 
 ## License
 
-MIT License — see LICENSE file for details.
+MIT License - see LICENSE file for details.
