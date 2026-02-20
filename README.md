@@ -12,6 +12,8 @@ models - every neuron fires discrete spikes, every synapse has
 excitatory/inhibitory dynamics, and learning happens through biologically
 plausible STDP (Spike-Timing Dependent Plasticity).
 
+![Bio Brain Screenshot](screenshot.png)
+
 ---
 
 ## Quick Start
